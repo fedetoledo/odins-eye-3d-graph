@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph Visualization</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #191919;
+      }
+
+      .main-container {
+        display: flex;
+        position: relative;
+      }
+
+      .three-d-container {
+        width: 70%;
+      }
+
+      .aside {
+        z-index: 1;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 30px;
+        width: 30%;
+        background: rgb(74, 87, 112);
+        background: linear-gradient(
+          150deg,
+          rgba(74, 87, 112, 1) 0%,
+          rgba(51, 71, 86, 1) 100%
+        );
+        box-shadow: 0 0 10px 0 #ffffffaa;
+        color: white;
+      }
+
+      .aside .header .title {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+
+      .aside .doc-item:first-child {
+        margin-top: 24px;
+      }
+
+      .aside .doc-item {
+        margin-top: 12px;
+      }
+
+      .aside .doc-item a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="three-d-container">
+        <div id="3d-graph"></div>
+      </div>
+      <div class="aside">
+        <div class="header">
+          <div class="title">OdinsEye - Connection Viewer</div>
+        </div>
+        <div class="aside-content">
+          <div id="details-container"></div>
+          <div id="documents-container">
+            <div id="documents-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
