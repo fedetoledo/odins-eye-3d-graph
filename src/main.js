@@ -53,11 +53,14 @@ const main = async () => {
 
   const folder = await assetLoader.loadAsset(
     'model',
-    './assets/models/folder.glb'
+    './public/assets/models/folder.glb'
   );
   folder.scene.scale.set(5, 5, 5);
 
-  const file = await assetLoader.loadAsset('model', './assets/models/file.glb');
+  const file = await assetLoader.loadAsset(
+    'model',
+    './public/assets/models/file.glb'
+  );
   file.scene.scale.multiplyScalar(10);
 
   const cube = new THREE.Mesh(
